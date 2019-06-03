@@ -31,7 +31,8 @@
   margin-bottom: 0px; }
 
 .card {
-  border: none; }
+  border: none;
+  background: transparent; }
 
 .judul-card {
   font-weight: bold;
@@ -39,5 +40,18 @@
 
 .card-body {
   padding: 20px 0px; }
+
+.content-2-img {
+  padding: 0; }
+
+.content-2 h2,
+.card-body-p {
+  font-weight: bold;
+  padding-bottom: 3%; }
+
+.content-2 i {
+  font-size: 200%;
+  padding: 3% 0;
+  color: #dd99dd; }
 
 /*# sourceMappingURL=custom.css.map */
