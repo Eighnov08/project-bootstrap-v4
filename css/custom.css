@@ -24,4 +24,20 @@
   background-image: url("../images/banner-bg.jpg");
   color: white; }
 
+.content-1 h2 {
+  font-weight: bold; }
+
+.content-1 p {
+  margin-bottom: 0px; }
+
+.card {
+  border: none; }
+
+.judul-card {
+  font-weight: bold;
+  padding-bottom: 10px; }
+
+.card-body {
+  padding: 20px 0px; }
+
 /*# sourceMappingURL=custom.css.map */
