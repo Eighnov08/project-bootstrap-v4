@@ -1,0 +1,24 @@
+.support p {
+    color: $font-white;
+    margin-bottom: 0% !important;
+    float: right;
+}
+
+.sosmed {
+    font-size: 110%;
+    margin-right: 2%;
+    color: $font-white;
+}
+
+.banner {
+    background-image: url('../images/banner-bg.jpg');
+    color: $font-white;
+}
+
+.banner h1 {
+    @extend %h1-bold-jumbo;
+}
+
+.banner a {
+    @extend %button;
+}

@@ -1,0 +1,27 @@
+.banner a {
+  text-decoration: none;
+  width: 25%;
+  padding: 1%;
+  background-color: white;
+  display: inline-block;
+  text-align: center; }
+
+.banner h1 {
+  font-size: 300%;
+  font-weight: bold; }
+
+.support p {
+  color: white;
+  margin-bottom: 0% !important;
+  float: right; }
+
+.sosmed {
+  font-size: 110%;
+  margin-right: 2%;
+  color: white; }
+
+.banner {
+  background-image: url("../images/banner-bg.jpg");
+  color: white; }
+
+/*# sourceMappingURL=custom.css.map */
