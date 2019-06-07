@@ -2,9 +2,7 @@ $font-white: rgb(255, 255, 255);
 // EXTEND
 %button {
     text-decoration: none;
-    width: 25%;
-    padding: 1%;
-    background-color: $font-white;
+    padding: 2% 5%;
     display: inline-block;
     text-align: center;
 }
