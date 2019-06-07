@@ -54,4 +54,43 @@
   padding: 3% 0;
   color: #dd99dd; }
 
+.content-3 {
+  background: url(../images/discount-bg.png) no-repeat center;
+  color: white; }
+
+.content-3 a {
+  display: inline-block;
+  background: white;
+  padding: 10px 30px;
+  text-align: center;
+  color: black;
+  text-decoration: none; }
+
+.content-3 .estimate {
+  display: inline-block;
+  background: #8687e4;
+  padding: 10px 30px;
+  text-align: center;
+  color: white;
+  float: right;
+  text-decoration: none; }
+
+.content-3 .form {
+  padding: 10% 0%; }
+
+.content-3 .form-control {
+  background: transparent;
+  color: white; }
+
+.form-control::-webkit-input-placeholder {
+  color: white; }
+
+/*support mozilla*/
+.form-control:-moz-input-placeholder {
+  color: white; }
+
+/*support internet explorer*/
+.form-control:-ms-input-placeholder {
+  color: white; }
+
 /*# sourceMappingURL=custom.css.map */

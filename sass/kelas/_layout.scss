@@ -60,3 +60,54 @@
     padding: 3% 0;
     color: rgb(221, 153, 221);
 }
+
+.content-3 {
+    background: url(../images/discount-bg.png) no-repeat center;
+    color: $font-white;
+}
+
+.content-3 a {
+    display: inline-block;
+    background: $font-white;
+    padding: 10px 30px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+.content-3 .estimate {
+    display: inline-block;
+    background: rgb(134, 135, 228);
+    padding: 10px 30px;
+    text-align: center;
+    color: $font-white;
+    float: right;
+    text-decoration: none;
+}
+
+.content-3 .form {
+    padding: 10% 0%;
+}
+
+.content-3 .form-control {
+    background: transparent;
+    color: $font-white;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: white;
+}
+
+
+/*support mozilla*/
+
+.form-control:-moz-input-placeholder {
+    color: white;
+}
+
+
+/*support internet explorer*/
+
+.form-control:-ms-input-placeholder {
+    color: white;
+}
