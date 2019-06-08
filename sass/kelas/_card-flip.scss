@@ -12,10 +12,10 @@
     border-color: #007b5e;
 }
 
-.card {
+.content-5-card {
     border: none;
     margin: 0% !important;
-    background: #ffffff;
+    background-color: rgba(214, 224, 226, 0.2);
 }
 
 .image-flip:hover .backside,
@@ -61,7 +61,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: white;
+    background-color: rgba(214, 224, 226, 0.2);
     -webkit-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
     -o-transform: rotateY(-180deg);
@@ -90,31 +90,40 @@
     transform-style: preserve-3d;
 }
 
-.frontside .card,
-.backside .card {
+.frontside .content-5-card,
+.backside .content-5-card {
     min-height: 312px;
 }
 
-.backside .card a {
+.backside .content-5-card a {
     font-size: 18px;
     color: #007b5e !important;
 }
 
-.frontside .card .card-title,
-.backside .card .card-title {
+.frontside .content-5-card .card-title,
+.backside .content-5-card .card-title {
     color: #007b5e !important;
 }
 
-.frontside .card .card-body img {
+.frontside .content-5-card .content-5-card-body img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
+    margin-bottom: 3%;
 }
 
-.backside .card .card-body .list-inline .list-inline-item {
+.list-inline-item {
     padding: 5% 0%;
+}
+
+.plus {
+    color: $font-white;
 }
 
 i {
     color: #007b5e;
+}
+
+.card-text {
+    padding: 0% 5%;
 }
