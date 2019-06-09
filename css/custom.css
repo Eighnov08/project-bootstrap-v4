@@ -99,7 +99,7 @@
   float: left; }
 
 .content-5 {
-  background: url(../images/bg-content-5.png) no-repeat center; }
+  background: url(../images/bg-content-5-lg.png) no-repeat center; }
 
 .content-5 .row-1 {
   color: white;
@@ -110,6 +110,10 @@
 
 .content-5 .container {
   padding: 3% 0%; }
+
+.premium img {
+  width: 15%;
+  margin: 10% 2%; }
 
 .btn-primary:hover,
 .btn-primary:focus {
@@ -221,7 +225,7 @@
 i {
   color: #007b5e; }
 
-.card-text {
+.card-text-flip {
   padding: 0% 5%; }
 
 /*# sourceMappingURL=custom.css.map */
