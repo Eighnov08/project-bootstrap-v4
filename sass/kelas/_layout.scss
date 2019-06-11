@@ -134,6 +134,9 @@
     .container {
         padding: 3% 0%;
     }
+    .carousel-indicators {
+        margin-bottom: -2%;
+    }
 }
 
 .footer {
@@ -195,5 +198,12 @@
         border-radius: 1px;
         background-color: rgb(74, 112, 238) !important;
         border: none;
+    }
+}
+
+.gallery {
+    img {
+        width: 20%;
+        margin: 0% 1%;
     }
 }

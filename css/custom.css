@@ -99,6 +99,8 @@
     margin-bottom: 0%; }
   .content-5 .container {
     padding: 3% 0%; }
+  .content-5 .carousel-indicators {
+    margin-bottom: -2%; }
 
 .footer {
   color: white;
@@ -151,6 +153,10 @@
     border-radius: 1px;
     background-color: #4a70ee !important;
     border: none; }
+
+.gallery img {
+  width: 20%;
+  margin: 0% 1%; }
 
 .content-5 .btn-primary:hover,
 .content-5 .btn-primary:focus {
