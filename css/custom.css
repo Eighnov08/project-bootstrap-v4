@@ -1,4 +1,4 @@
-.banner a, .content-3 a, .content-3 .estimate {
+.banner a, .content-3 a, .content-3 .estimate, .content-blog .card .btn-card-blog {
   text-decoration: none !important;
   padding: 2% 5%;
   display: inline-block;
@@ -9,6 +9,12 @@
   padding: 1% 5%;
   display: inline-block;
   text-align: center; }
+
+.content-blog .news {
+  padding: 3% 0%;
+  background-color: #ca7bbd;
+  text-align: center;
+  font-weight: 500; }
 
 .banner h1, .banner-blog h1 {
   font-size: 300%;
@@ -193,6 +199,24 @@
       font-weight: 500; }
     .content-blog .rgba hr {
       border: 1px solid white; }
+  .content-blog .card {
+    background: transparent;
+    border: none;
+    margin-bottom: 10%; }
+    .content-blog .card .card-body {
+      color: black;
+      padding: 0;
+      margin-left: 5%; }
+    .content-blog .card .card-body-blog {
+      margin: 0%;
+      padding: 5% 0%;
+      color: black; }
+    .content-blog .card .btn-card-blog {
+      background: white; }
+  .content-blog .category {
+    border: 1px solid #ececec;
+    border-radius: 1%;
+    padding: 5%; }
 
 .content-5 .btn-primary:hover,
 .content-5 .btn-primary:focus {

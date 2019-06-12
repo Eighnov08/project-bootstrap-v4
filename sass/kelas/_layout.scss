@@ -251,4 +251,31 @@
             border: 1px solid white;
         }
     }
+    .news {
+        @extend %header-category;
+    }
+    .card {
+        background: transparent;
+        border: none;
+        margin-bottom: 10%;
+        .card-body {
+            color: black;
+            padding: 0;
+            margin-left: 5%;
+        }
+        .card-body-blog {
+            margin: 0%;
+            padding: 5% 0%;
+            color: black;
+        }
+        .btn-card-blog {
+            @extend %button;
+            background: $font-white;
+        }
+    }
+    .category {
+        border: 1px solid rgb(236, 236, 236);
+        border-radius: 1%;
+        padding: 5%;
+    }
 }

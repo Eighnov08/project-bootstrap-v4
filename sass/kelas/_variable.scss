@@ -14,6 +14,13 @@ $font-white: rgb(255, 255, 255);
     text-align: center;
 }
 
+%header-category {
+    padding: 3% 0%;
+    background-color: rgb(202, 123, 189);
+    text-align: center;
+    font-weight: 500;
+}
+
 %h1-bold-jumbo {
     font-size: 300%;
     font-weight: bold;
