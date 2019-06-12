@@ -207,3 +207,48 @@
         margin: 0% 1%;
     }
 }
+
+.banner-blog {
+    background: url(../images/blog/blog-home-banner.jpg) no-repeat center;
+    background-size: cover;
+    color: $font-white;
+    .rgba {
+        background: rgba(0, 0, 0, 0.5)
+    }
+    .container {
+        padding: 12% 0%;
+    }
+    h1 {
+        @extend %h1-bold-jumbo;
+    }
+    a {
+        @extend %button-col-12;
+        background: $font-white;
+        color: black;
+        font-weight: bold;
+    }
+}
+
+.content-blog {
+    color: $font-white;
+    .content-banner1 {
+        background: url(../images/blog/cat-widget1.jpg) no-repeat center;
+    }
+    .content-banner2 {
+        background: url(../images/blog/cat-widget2.jpg) no-repeat center;
+    }
+    .content-banner3 {
+        background: url(../images/blog/cat-widget3.jpg) no-repeat center;
+    }
+    .rgba {
+        background: rgba(0, 0, 0, 0.7) center;
+        padding: 10% 10%;
+        margin: 25% 7%;
+        .judul-content {
+            font-weight: 500;
+        }
+        hr {
+            border: 1px solid white;
+        }
+    }
+}

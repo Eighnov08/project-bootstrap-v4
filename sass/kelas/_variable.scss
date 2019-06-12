@@ -1,8 +1,15 @@
 $font-white: rgb(255, 255, 255);
 // EXTEND
 %button {
-    text-decoration: none;
+    text-decoration: none !important;
     padding: 2% 5%;
+    display: inline-block;
+    text-align: center;
+}
+
+%button-col-12 {
+    text-decoration: none !important;
+    padding: 1% 5%;
     display: inline-block;
     text-align: center;
 }

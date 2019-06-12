@@ -1,10 +1,16 @@
 .banner a, .content-3 a, .content-3 .estimate {
-  text-decoration: none;
+  text-decoration: none !important;
   padding: 2% 5%;
   display: inline-block;
   text-align: center; }
 
-.banner h1 {
+.banner-blog a {
+  text-decoration: none !important;
+  padding: 1% 5%;
+  display: inline-block;
+  text-align: center; }
+
+.banner h1, .banner-blog h1 {
   font-size: 300%;
   font-weight: bold; }
 
@@ -157,6 +163,36 @@
 .gallery img {
   width: 20%;
   margin: 0% 1%; }
+
+.banner-blog {
+  background: url(../images/blog/blog-home-banner.jpg) no-repeat center;
+  background-size: cover;
+  color: white; }
+  .banner-blog .rgba {
+    background: rgba(0, 0, 0, 0.5); }
+  .banner-blog .container {
+    padding: 12% 0%; }
+  .banner-blog a {
+    background: white;
+    color: black;
+    font-weight: bold; }
+
+.content-blog {
+  color: white; }
+  .content-blog .content-banner1 {
+    background: url(../images/blog/cat-widget1.jpg) no-repeat center; }
+  .content-blog .content-banner2 {
+    background: url(../images/blog/cat-widget2.jpg) no-repeat center; }
+  .content-blog .content-banner3 {
+    background: url(../images/blog/cat-widget3.jpg) no-repeat center; }
+  .content-blog .rgba {
+    background: rgba(0, 0, 0, 0.7) center;
+    padding: 10% 10%;
+    margin: 25% 7%; }
+    .content-blog .rgba .judul-content {
+      font-weight: 500; }
+    .content-blog .rgba hr {
+      border: 1px solid white; }
 
 .content-5 .btn-primary:hover,
 .content-5 .btn-primary:focus {
