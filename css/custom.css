@@ -258,6 +258,9 @@
       float: left;
       margin-right: 3%; }
 
+.contact .map {
+  height: 500px; }
+
 .content-5 .btn-primary:hover,
 .content-5 .btn-primary:focus {
   background-color: #108d6f;
