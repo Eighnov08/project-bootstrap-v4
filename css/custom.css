@@ -203,20 +203,31 @@
     background: transparent;
     border: none;
     margin-bottom: 10%; }
-    .content-blog .card .card-body {
-      color: black;
-      padding: 0;
-      margin-left: 5%; }
     .content-blog .card .card-body-blog {
       margin: 0%;
       padding: 5% 0%;
       color: black; }
     .content-blog .card .btn-card-blog {
-      background: white; }
+      background: white;
+      color: black; }
   .content-blog .category {
     border: 1px solid #ececec;
     border-radius: 1%;
     padding: 5%; }
+    .content-blog .category .media {
+      color: black; }
+      .content-blog .category .media .judul-media {
+        font-weight: bold; }
+    .content-blog .category .list-group-category {
+      border-bottom: 1px dotted #e6e6e6; }
+      .content-blog .category .list-group-category p {
+        margin: 0%; }
+  .content-blog .list-group-item {
+    color: black;
+    background: transparent;
+    border: none;
+    padding-left: 0%;
+    padding-right: 0%; }
 
 .content-5 .btn-primary:hover,
 .content-5 .btn-primary:focus {
