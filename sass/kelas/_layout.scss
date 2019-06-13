@@ -231,6 +231,18 @@
 
 .content-blog {
     color: $font-white;
+    .ul-blog {
+        color: black;
+        overflow: hidden;
+        text-align: left;
+        padding: 0%;
+        margin: 0%;
+        .li-blog {
+            list-style: none;
+            float: left;
+            margin-right: 3%;
+        }
+    }
     .content-banner1 {
         background: url(../images/blog/cat-widget1.jpg) no-repeat center;
     }
