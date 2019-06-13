@@ -293,4 +293,39 @@
         padding-left: 0%;
         padding-right: 0%;
     }
+    .content-blog-detail {
+        .detail {
+            color: black;
+            .media-detail,
+            .form-detail {
+                border: 1px solid rgb(236, 236, 236);
+                border-radius: 1%;
+                padding: 5%;
+                .comment {
+                    background: rgb(134, 135, 228);
+                    color: $font-white;
+                    @extend %button;
+                }
+                .username-comment {
+                    font-weight: bold;
+                }
+                .btn-card-blog {
+                    @extend %button;
+                    background: $font-white;
+                    color: black;
+                }
+            }
+        }
+        .ul-blog-detail {
+            overflow: hidden;
+            text-align: left;
+            padding: 0%;
+            margin: 0%;
+            .li-blog-detail {
+                list-style: none;
+                float: left;
+                margin-right: 3%;
+            }
+        }
+    }
 }
