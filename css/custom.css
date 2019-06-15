@@ -1,6 +1,6 @@
 .banner a, .content-3 a, .content-3 .estimate, .content-blog .card .btn-card-blog, .content-blog .content-blog-detail .detail .media-detail .comment,
 .content-blog .content-blog-detail .detail .form-detail .comment, .content-blog .content-blog-detail .detail .media-detail .btn-card-blog,
-.content-blog .content-blog-detail .detail .form-detail .btn-card-blog {
+.content-blog .content-blog-detail .detail .form-detail .btn-card-blog, .contact .form-contact a {
   text-decoration: none !important;
   padding: 2% 5%;
   display: inline-block;
@@ -270,6 +270,24 @@
 
 .contact .map {
   height: 500px; }
+.contact .media i {
+  font-size: 200%;
+  margin-right: 5%; }
+.contact .media .contact-detail {
+  font-weight: bold; }
+.contact input[type=text] {
+  width: 100%;
+  height: 20%; }
+.contact input[type=email] {
+  width: 100%;
+  height: 20%; }
+.contact textarea {
+  width: 100%; }
+.contact .form-contact a {
+  background: #8687e4;
+  border: 1px solid #8687e4;
+  border-radius: 10%;
+  color: white; }
 
 .content-5 .btn-primary:hover,
 .content-5 .btn-primary:focus {
