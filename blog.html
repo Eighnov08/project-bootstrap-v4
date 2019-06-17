@@ -97,38 +97,44 @@
     <!-- CONTENT -->
     <div class="container-fluid bg-light">
         <div class="container content-blog pb-5">
-            <div class="row text-center">
-                <div class="col-md-4 content-banner1">
-                    <div class="rgba">
-                        <p class="judul-content">
-                            SOCIAL LIFE
-                        </p>
-                        <hr>
-                        <p class="m-0">
-                            Enjoy your social life together
-                        </p>
+            <div class="row text-center pt-5">
+                <div class="col-md-4">
+                    <div class="img content-banner1 p-4">
+                        <div class="rgba">
+                            <p class="judul-content">
+                                SOCIAL LIFE
+                            </p>
+                            <hr>
+                            <p class="m-0">
+                                Enjoy your social life together
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 content-banner2">
-                    <div class="rgba">
-                        <p class="judul-content">
-                            POLITICS
-                        </p>
-                        <hr>
-                        <p class="m-0">
-                            Enjoy your social life together
-                        </p>
+                <div class="col-md-4">
+                    <div class="img content-banner2 p-4">
+                        <div class="rgba">
+                            <p class="judul-content">
+                                POLITICS
+                            </p>
+                            <hr>
+                            <p class="m-0">
+                                Enjoy your social life together
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 content-banner3">
-                    <div class="rgba">
-                        <p class="judul-content">
-                            FOOD
-                        </p>
-                        <hr>
-                        <p class="m-0">
-                            Enjoy your social life together
-                        </p>
+                <div class="col-md-4">
+                    <div class="img content-banner3 p-4">
+                        <div class="rgba">
+                            <p class="judul-content">
+                                FOOD
+                            </p>
+                            <hr>
+                            <p class="m-0">
+                                Enjoy your social life together
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -288,8 +294,8 @@
                         <div class="col-md-12">
                             <nav aria-label="...">
                                 <ul class="pagination justify-content-center">
-                                    <li class="page-item disabled">
-                                        <span class="page-link">Previous</span>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a>
                                     </li>
                                     <li class="page-item"><a class="page-link" href="#">1</a></li>
                                     <li class="page-item active" aria-current="page">
@@ -300,7 +306,7 @@
                                     </li>
                                     <li class="page-item"><a class="page-link" href="#">3</a></li>
                                     <li class="page-item">
-                                        <a class="page-link" href="#">Next</a>
+                                        <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
                                     </li>
                                 </ul>
                             </nav>
@@ -309,9 +315,11 @@
                 </div>
                 <div class="col-md-4">
                     <div class="category">
-                        <form class="d-flex my-2 my-lg-0 pt-4">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        <form>
+                            <div class="d-flex my-2 my-lg-0 pt-4">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                                <button type="button"><i class="fas fa-search"></i></button>
+                            </div>
                         </form><br>
                         <hr><br>
                         <p class="news">

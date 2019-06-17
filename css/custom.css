@@ -68,6 +68,8 @@
 .content-3 {
   background: url(../images/discount-bg.png) no-repeat center;
   color: white; }
+  .content-3 .form-control::-webkit-input-placeholder {
+    color: white; }
   .content-3 a {
     background: white;
     color: black; }
@@ -80,9 +82,6 @@
   .content-3 .form-control {
     background: transparent;
     color: white; }
-
-.form-control::-webkit-input-placeholder {
-  color: white; }
 
 /*support mozilla*/
 .form-control:-moz-input-placeholder {
@@ -198,19 +197,23 @@
       float: left;
       margin-right: 3%; }
   .content-blog .content-banner1 {
-    background: url(../images/blog/cat-widget1.jpg) no-repeat center; }
+    background: url(../images/blog/cat-widget1.jpg) no-repeat center;
+    background-size: 100%; }
   .content-blog .content-banner2 {
-    background: url(../images/blog/cat-widget2.jpg) no-repeat center; }
+    background: url(../images/blog/cat-widget2.jpg) no-repeat center;
+    background-size: 100%; }
   .content-blog .content-banner3 {
-    background: url(../images/blog/cat-widget3.jpg) no-repeat center; }
+    background: url(../images/blog/cat-widget3.jpg) no-repeat center;
+    background-size: 100%; }
   .content-blog .rgba {
     background: rgba(0, 0, 0, 0.7) center;
-    padding: 10% 10%;
-    margin: 25% 7%; }
+    padding: 10%; }
     .content-blog .rgba .judul-content {
       font-weight: 500; }
     .content-blog .rgba hr {
       border: 1px solid white; }
+  .content-blog .img {
+    margin-bottom: 15%; }
   .content-blog .card {
     background: transparent;
     border: none;
@@ -226,6 +229,20 @@
     border: 1px solid #ececec;
     border-radius: 1%;
     padding: 5%; }
+    .content-blog .category .form-control::-webkit-input-placeholder {
+      color: white; }
+    .content-blog .category .form-control {
+      border: none;
+      background-color: #ca7bbd;
+      border-radius: 50rem;
+      color: white; }
+    .content-blog .category button {
+      background: transparent;
+      border: none;
+      position: absolute;
+      padding-top: 2%;
+      margin-left: 70%;
+      color: white; }
     .content-blog .category .media {
       color: black; }
       .content-blog .category .media .judul-media {
@@ -267,6 +284,11 @@
       list-style: none;
       float: left;
       margin-right: 3%; }
+  .content-blog .pagination .page-link {
+    border: none;
+    background: transparent; }
+  .content-blog .pagination .page-item.active .page-link {
+    background-color: #b07cc5; }
 
 .contact .map {
   height: 500px; }
@@ -286,7 +308,7 @@
 .contact .form-contact a {
   background: #8687e4;
   border: 1px solid #8687e4;
-  border-radius: 10%;
+  border-radius: 50rem;
   color: white; }
 
 .content-5 .btn-primary:hover,
