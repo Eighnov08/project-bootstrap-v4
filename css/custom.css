@@ -32,11 +32,6 @@
   margin-right: 2%;
   color: white; }
 
-.navigation .nav-item {
-  line-height: 50px; }
-  .navigation .nav-item:hover {
-    border-bottom: 3px solid #8687e4; }
-
 .banner {
   background-image: url("../images/banner-bg.jpg");
   color: white; }

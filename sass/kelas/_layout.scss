@@ -10,15 +10,6 @@
     color: $font-white;
 }
 
-.navigation {
-    .nav-item {
-        line-height: 50px;
-        &:hover {
-            border-bottom: 3px solid rgb(134, 135, 228);
-        }
-    }
-}
-
 .banner {
     background-image: url('../images/banner-bg.jpg');
     color: $font-white;
