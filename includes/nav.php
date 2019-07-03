@@ -11,22 +11,22 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html">HOME <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="index.php">HOME <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html">ABOUT</a>
+                                <a class="nav-link" href="about.php">ABOUT</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="services.html">SERVICE</a>
+                                <a class="nav-link" href="services.php">SERVICE</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="gallery.html">GALLERY</a>
+                                <a class="nav-link" href="gallery.php">GALLERY</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="blog.html">BLOG</a>
+                                <a class="nav-link" href="blog.php">BLOG</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link pr-0" href="contact.html">CONTACT</a>
+                                <a class="nav-link pr-0" href="contact.php">CONTACT</a>
                             </li>
                         </ul>
                     </div>

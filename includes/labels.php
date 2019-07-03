@@ -1,4 +1,4 @@
-<div class="container content-4">
+<div class="container content-4 p-0">
     <div class="row premium text-center">
         <div class="col-md-12 p-0">
             <img src="images/l3.png" class="img-fluid">

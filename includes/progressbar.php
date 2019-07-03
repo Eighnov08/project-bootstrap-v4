@@ -1,5 +1,5 @@
 <div class="container text-center content-4">
-    <div class="row mb-5 pt-5">
+    <div class="row">
         <div class="col-md-12">
             <div class="progress mb-3">
                 <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50% web design</div>

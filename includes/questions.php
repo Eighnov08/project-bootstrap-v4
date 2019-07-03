@@ -1,4 +1,4 @@
-<div class="container text-center content-4">
+<div class="container text-center content-4 py-0">
         <div class="row content-4-1">
             <div class="col-md-12">
                 <h2>
@@ -15,7 +15,7 @@
                             <h2 class="mb-0">
                                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     Success
-                                  </button>
+                                </button>
                             </h2>
                         </div>
 

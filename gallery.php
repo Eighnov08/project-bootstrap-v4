@@ -9,19 +9,10 @@
     <?php include "includes/nav.php"; ?>
     <!-- BANNER -->
     <?php include "includes/banner-sub.php"; ?>
-    <!-- FIX -->
-    <?php include "includes/fix.php"; ?>
-    <!-- DISCOUNT --> 
-    <?php include "includes/discount.php"; ?>
-    <!-- PROGRESSBAR -->
-    <?php include "includes/progressbar.php"; ?>
-    <!-- CLIENTS -->
-    <?php include "includes/clients.php"; ?>
-    <!-- CONTENT-6-LABELS -->
-    <?php include "includes/labels.php"; ?>
+    <!-- CONTENT 1 SUPP -->
+    <?php include "includes/gallery.php"; ?>
     <!-- FOOTER -->
     <?php include "includes/footer.php"; ?>
-    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

@@ -91,17 +91,20 @@
 .form-control:-ms-input-placeholder {
   color: white; }
 
-.content-4 .content-4-1 {
+.content-4 {
   padding: 7% 0%; }
-.content-4 .text-muted {
-  margin-bottom: 0%; }
-.content-4 .content-4-2 img {
-  width: 13%; }
-.content-4 .content-4-3 h2 {
-  float: left; }
-.content-4 .premium img {
-  width: 15%;
-  margin: 10% 2%; }
+  .content-4 .content-4-1 {
+    padding-bottom: 7%;
+    padding-top: 0%; }
+  .content-4 .text-muted {
+    margin-bottom: 0%; }
+  .content-4 .content-4-2 img {
+    width: 13%; }
+  .content-4 .content-4-3 h2 {
+    float: left; }
+  .content-4 .premium img {
+    width: 15%;
+    margin: 10% 2%; }
 
 .content-5 {
   background: url(../images/bg-content-5-lg.png) no-repeat center; }

@@ -1,4 +1,4 @@
-<div class="container content-4">
+<div class="container content-4 pb-0">
         <div class="row content-4-1">
             <div class="col-md-12 text-center">
                 <h2>
