@@ -7,26 +7,17 @@
     <?php include "includes/header.php"; ?>
     <!-- NAVIGATION -->
     <?php include "includes/nav.php"; ?>
-    <!-- BANNER -->
-    <?php include "includes/banner-home.php"; ?>
-    <!-- CONTENT 1 SUPP -->
-    <?php include "includes/supporters.php"; ?>
-    <!-- CONTENT 2 FIX -->
-    <?php include "includes/fix.php"; ?>
-    <!-- CONTENT 3 DISCOUNT --> 
-    <?php include "includes/discount.php"; ?>
-    <!-- CONTENT-4-PROCESS -->
-    <?php include "includes/process.php"; ?>
-    <!-- CONTENT-4-QUESTIONS -->
-    <?php include "includes/questions.php"; ?>
-    <!-- CONTENT-4-PROGRESSBAR -->
-    <?php include "includes/progressbar.php"; ?>
-    <!-- CONTENT 5 CLIENTS -->
-    <?php include "includes/clients.php"; ?>
-    <!-- CONTENT-6-BLOG -->
-    <?php include "includes/blog.php"; ?>
-    <!-- CONTENT-6-LABELS -->
-    <?php include "includes/labels.php"; ?>
+    <!-- CONTENT -->
+    <?php
+        if (isset($_GET["home"])) {include "home.php";}
+        else if (isset($_GET["about"])) {include "about.php";}
+        else if (isset($_GET["service"])) {include "services.php";}
+        else if (isset($_GET["gallery"])) {include "gallery.php";}
+        else if (isset($_GET["blog"] )) {include "blog.php";}
+        else if (isset($_GET["blog-detail"] )) {include "blog-detail.php";}
+        else if (isset($_GET["contact"])) {include "contact.php";}
+        else {include "home.php";}
+    ?>
     <!-- FOOTER -->
     <?php include "includes/footer.php"; ?>
     <!-- Optional JavaScript -->
