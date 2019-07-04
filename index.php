@@ -1,5 +1,8 @@
 <?php
+    include "includes/config.php";
     include "includes/head.php";
+    include "function/function_tgl_indo.php";
+    date_default_timezone_set("Asia/Jakarta");
 ?>
  
 <body>
@@ -28,3 +31,7 @@
 </body>
 
 </html>
+
+<?php
+    mysqli_close($connection);
+?>
