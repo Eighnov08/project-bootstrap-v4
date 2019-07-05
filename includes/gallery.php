@@ -1,34 +1,15 @@
+<?php
+    $gallery = mysqli_query($connection, "SELECT * FROM gallery ORDER BY id DESC");
+?>
+
 <div class="container text-center gallery">
-    <div class="row pt-5 pb-4">
+    <div class="row py-3">
         <div class="col-md-12">
-            <a data-fancybox="gallery" href="images/elements/t1.jpg"><img src="images/elements/t1.jpg"></a>
-            <a data-fancybox="gallery" href="images/elements/t2.jpg"><img src="images/elements/t2.jpg"></a>
-            <a data-fancybox="gallery" href="images/elements/t3.jpg"><img src="images/elements/t3.jpg"></a>
-            <a data-fancybox="gallery" href="images/elements/t4.jpg"><img src="images/elements/t4.jpg"></a>
-        </div>
-    </div>
-    <div class="row pb-4">
-        <div class="col-md-12">
-            <a data-fancybox="gallery" href="images/elements/t2.jpg"><img src="images/elements/t2.jpg"></a>
-            <a data-fancybox="gallery" href="images/elements/t1.jpg"><img src="images/elements/t1.jpg"></a>
-            <a data-fancybox="gallery" href="images/elements/t4.jpg"><img src="images/elements/t4.jpg"></a>
-            <a data-fancybox="gallery" href="images/elements/t3.jpg"><img src="images/elements/t3.jpg"></a>
-        </div>
-    </div>
-    <div class="row pb-4">
-        <div class="col-md-12">
-            <a data-fancybox="gallery" href="images/elements/t3.jpg"><img src="images/elements/t3.jpg"></a>
-            <a data-fancybox="gallery" href="images/elements/t4.jpg"><img src="images/elements/t4.jpg"></a>
-            <a data-fancybox="gallery" href="images/elements/t1.jpg"><img src="images/elements/t1.jpg"></a>
-            <a data-fancybox="gallery" href="images/elements/t2.jpg"><img src="images/elements/t2.jpg"></a>
-        </div>
-    </div>
-    <div class="row pb-5">
-        <div class="col-md-12">
-            <a data-fancybox="gallery" href="images/elements/t4.jpg"><img src="images/elements/t4.jpg"></a>
-            <a data-fancybox="gallery" href="images/elements/t1.jpg"><img src="images/elements/t1.jpg"></a>
-            <a data-fancybox="gallery" href="images/elements/t2.jpg"><img src="images/elements/t2.jpg"></a>
-            <a data-fancybox="gallery" href="images/elements/t3.jpg"><img src="images/elements/t3.jpg"></a>
+            <?php if(mysqli_num_rows($gallery)>0) {?>
+                <?php while($row_gallery=mysqli_fetch_array($gallery)) {?>
+                    <a data-fancybox="gallery" data-caption="<?php echo $row_gallery["caption"] ?>" href="images/elements/<?php echo $row_gallery["image"] ?>"><img class="py-3" src="images/elements/<?php echo $row_gallery["image"] ?>"></a>
+                <?php } ?>
+            <?php } ?>
         </div>
     </div>
 </div>
