@@ -1,3 +1,14 @@
+<?php
+    $detail_id = $_GET["blog-detail"];
+    $detail = mysqli_query($connection, "SELECT post.*, category.category_name, category.icon FROM post, category 
+                            WHERE post.category_id = category.id AND post.id = '$detail_id' ORDER BY id DESC");
+    if(mysqli_num_rows($detail)==0) header("location:index.php?blog");
+    $row_detail = mysqli_fetch_array($detail);
+
+    $comment = mysqli_query($connection, "SELECT * FROM comment WHERE comment.post_id = '$detail_id' AND status = '1' ORDER BY id DESC");
+    $jumlah_comment = mysqli_num_rows($comment);
+?>
+
 <!-- BANNER -->
     <?php include "includes/banner-sub.php"; ?>
     <!-- CONTENT -->
@@ -8,71 +19,39 @@
                     <img src="images/blog/feature-img5.jpg" class="img-fluid w-100 mb-2" alt="">
                     <ul class="ul-blog-detail">
                         <li class="li-blog-detail">Mark Wiens&nbsp;&nbsp;<i class="fas fa-user-circle"></i></li>
-                        <li class="li-blog-detail">13 Juni 2017&nbsp;&nbsp;<i class="fas fa-calendar-alt"></i></li>
+                        <li class="li-blog-detail"><?php echo substr(tanggal_indonesia($row_detail["date"]), 0, 20) ?>&nbsp;&nbsp;<i class="fas fa-calendar-alt"></i></li>
                         <li class="li-blog-detail">2M Views&nbsp;&nbsp;<i class="fas fa-eye"></i></li>
-                        <li class="li-blog-detail">08 Comments&nbsp;&nbsp;<i class="fas fa-comments"></i></li>
+                        <li class="li-blog-detail"><?php echo $jumlah_comment ?> Comments&nbsp;&nbsp;<i class="fas fa-comments"></i></li>
+                        <li class="li-blog-detail"><?php echo $row_detail["category_name"] ?>&nbsp;&nbsp;<i class="<?php echo $row_detail["icon"] ?>"></i></li>
                     </ul>
                     <h4 class="my-3">
-                        Astronomy Binocular A Great Alternatives
+                        <?php echo $row_detail["title"] ?>
                     </h4>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto inventore, eius facere laudantium placeat tenetur esse. Aperiam expedita tempora laboriosam cupiditate harum natus, eos nisi repellendus. Perspiciatis ab assumenda molestiae obcaecati
-                        aperiam necessitatibus nostrum, explicabo recusandae possimus qui quasi culpa sed inventore eligendi, aut sit reiciendis enim minus iusto quas? Cupiditate delectus optio voluptates sit libero quis ipsum aliquid, accusamus omnis
-                        est esse, hic id ab.
-                    </p>
-                    <p>
-                        Doluptas recusandae saepe reprehenderit autem magni ipsa tempora doloribus quidem ut? Nulla, consequuntur culpa! Accusantium earum recusandae rerum laudantium, esse unde deserunt. Non modi harum porro vero. Minima cupiditate eum ratione architecto possimus
-                        perferendis?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto inventore, eius facere laudantium placeat tenetur esse. Aperiam expedita tempora laboriosam cupiditate harum natus, eos nisi repellendus. Perspiciatis ab assumenda molestiae obcaecati
-                        aperiam necessitatibus nostrum, explicabo recusandae possimus qui quasi culpa sed inventore eligendi, aut sit reiciendis enim minus iusto quas? Cupiditate delectus optio voluptates sit libero quis ipsum aliquid, accusamus omnis
-                        est esse, hic id ab.
+                        <?php echo $row_detail["description"] ?>
                     </p>
                     <div class="media-detail my-5">
                         <h5 class="text-center mb-5">
-                            3 Comments
+                            <?php echo $jumlah_comment ?> Comments
                         </h5>
                         <ul class="list-unstyled">
-                            <li class="media">
-                                <img src="images/blog/c1.jpg" class="mr-3" alt="...">
-                                <div class="media-body float-left">
-                                    <p class="mt-0 mb-1 username-comment">Hiliyah Azizah</p>
-                                    <p class="text-muted">
-                                        Juni 13, 2019 at 12.17 pm
-                                    </p>
-                                    <p>
-                                        Never say goodbye till the end comes!
-                                    </p>
-                                </div>
-                                <a href="" class="btn-card-blog">Reply</a>
-                            </li>
-                            <li class="media my-4">
-                                <img src="images/blog/c2.jpg" class="mr-3" alt="...">
-                                <div class="media-body">
-                                    <p class="mt-0 mb-1 username-comment">Fajar Septiadi</p>
-                                    <p class="text-muted">
-                                        Juni 13, 2019 at 12.17 pm
-                                    </p>
-                                    <p>
-                                        Never say goodbye till the end comes!
-                                    </p>
-                                </div>
-                                <a href="" class="btn-card-blog">Reply</a>
-                            </li>
-                            <li class="media">
-                                <img src="images/blog/c3.jpg" class="mr-3" alt="...">
-                                <div class="media-body">
-                                    <p class="mt-0 mb-1 username-comment">Bruno</p>
-                                    <p class="text-muted">
-                                        Juni 13, 2019 at 12.17 pm
-                                    </p>
-                                    <p>
-                                        Never say goodbye till the end comes!
-                                    </p>
-                                </div>
-                                <a href="" class="btn-card-blog">Reply</a>
-                            </li>
+                            <?php if(mysqli_num_rows($comment)>0) {?>
+                                <?php while($row_comment=mysqli_fetch_array($comment)) {?>
+                                    <li class="media my-4">
+                                        <img src="images/blog/c2.jpg" class="mr-3" alt="...">
+                                        <div class="media-body">
+                                            <p class="mt-0 mb-1 username-comment"><?php echo $row_comment["name"] ?></p>
+                                            <p class="text-muted">
+                                                <?php echo tanggal_indonesia($row_comment["date"]) ?>
+                                            </p>
+                                            <p>
+                                                <?php echo $row_comment["reply"] ?>
+                                            </p>
+                                        </div>
+                                        <a href="" class="btn-card-blog">Reply</a>
+                                    </li>
+                                <?php } ?>
+                            <?php } ?>
                         </ul>
                     </div>
                     <div class="form-detail mb-5">

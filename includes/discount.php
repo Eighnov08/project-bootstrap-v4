@@ -7,7 +7,6 @@
         $date = date("Y-m-d H:i:s");
         mysqli_query($connection, "INSERT INTO customer VALUES('','$name','$phone','$email','$message','$date')");
     }
-    
 ?>
 
 <div class="container-fluid content-3">
