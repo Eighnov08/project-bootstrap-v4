@@ -15,7 +15,7 @@
     <?php include "includes/nav.php"; ?>
     <!-- CONTENT -->
     <?php
-        if (isset($_GET["home"])) {include "home.php";}
+        if (isset($_GET["home"]) || isset($_GET["page"])) {include "home.php";}
         else if (isset($_GET["about"])) {include "about.php";}
         else if (isset($_GET["service"])) {include "services.php";}
         else if (isset($_GET["gallery"])) {include "gallery.php";}
