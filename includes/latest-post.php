@@ -1,6 +1,9 @@
 <?php
     $post = mysqli_query($connection, "SELECT post.*, category.category_name, category.icon FROM post, category 
                             WHERE post.category_id = category.id ORDER BY id DESC");
+
+    $comment = mysqli_query($connection, "SELECT comment.*, post.id FROM comment, post WHERE comment.post_id = post.id");
+    $jumlah_comment = mysqli_num_rows($comment);
 ?>
 
 
@@ -13,7 +16,7 @@
                         <li class="list-group-item">Mark Wiens&nbsp;&nbsp;<i class="fas fa-user-circle"></i></li>
                         <li class="list-group-item"><?php echo substr(tanggal_indonesia($row_post["date"]), 0, 20) ?>&nbsp;&nbsp;<i class="fas fa-calendar-alt"></i></li>
                         <li class="list-group-item">2M Views&nbsp;&nbsp;<i class="fas fa-eye"></i></li>
-                        <li class="list-group-item">08 Comments&nbsp;&nbsp;<i class="fas fa-comments"></i></li>
+                        <li class="list-group-item"><?php echo $jumlah_comment ?> Comments&nbsp;&nbsp;<i class="fas fa-comments"></i></li>
                         <li class="list-group-item"><?php echo $row_post["category_name"] ?>&nbsp;&nbsp;<i class="<?php echo $row_post["icon"] ?>"></i></li>
                     </ul>
                 </div>
