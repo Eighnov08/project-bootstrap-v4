@@ -21,7 +21,7 @@
                             <img src="images/blog/<?php echo $row_post["image"] ?>" class="card-img-top img-fluid">
                             <div class="card-body">
                                 <p>
-                                    <?php echo substr(tanggal_indonesia($row_post["date"]), 0, 25)?> | By Fajar
+                                    <?php echo substr(tanggal_indonesia($row_post["date"]), 0, 25)?> | <?php echo $row_post["name"] ?>
                                 </p>
                                 <p class="judul-card">
                                     <?php echo $row_post["title"] ?>

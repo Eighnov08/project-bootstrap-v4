@@ -18,7 +18,7 @@
                 <div class="col-md-8 detail">
                     <img src="images/blog/<?php echo $row_detail["image"] ?>" class="img-fluid w-100 mb-2" alt="">
                     <ul class="ul-blog-detail">
-                        <li class="li-blog-detail">Mark Wiens&nbsp;&nbsp;<i class="fas fa-user-circle"></i></li>
+                        <li class="li-blog-detail"><?php echo $row_detail["name"] ?>&nbsp;&nbsp;<i class="fas fa-user-circle"></i></li>
                         <li class="li-blog-detail"><?php echo substr(tanggal_indonesia($row_detail["date"]), 0, 20) ?>&nbsp;&nbsp;<i class="fas fa-calendar-alt"></i></li>
                         <li class="li-blog-detail">2M Views&nbsp;&nbsp;<i class="fas fa-eye"></i></li>
                         <li class="li-blog-detail"><?php echo $jumlah_comment ?> Comments&nbsp;&nbsp;<i class="fas fa-comments"></i></li>
