@@ -7,7 +7,10 @@
             <?php include "includes/category.php"; ?>
             <div class="row">
                 <div class="col-md-8">
-                    <?php include "includes/latest-post.php"; ?>
+                    <?php if (isset($_GET["blog"]) || isset($_GET["page"])) {include "includes/latest-post.php";}
+                    else if (isset($_GET["category"]) || isset($_GET["page-category"])) {include "includes/post-category.php";}
+                    else {include "includes/latest-post.php";}
+                    ?>
                 </div>
                 <div class="col-md-4">
                     <?php include "includes/aside-blog.php"; ?>

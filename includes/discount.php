@@ -1,13 +1,4 @@
 <?php
-
-//  if(isset($_GET["about?success"]) or isset($_GET["home?success"]) ){
-//     echo"oke";
-// } else{
-//     echo"gagal";
-// }
-    // $a = $_GET;
-
-
 if(isset($_POST["submit"])){
     $post_id = $_POST["post_id"];
     $name = $_POST["name"];
@@ -18,28 +9,28 @@ if(isset($_POST["submit"])){
 
     if(empty($name) && empty($phone) && empty($email) && empty($message)){
         if(isset($_GET["home"]) == "home" ){
-            echo "<script type='text/javascript'>window.top.location='index.php?home&failed';</script>";
+            echo "<script type='text/javascript'>window.top.location='index.php?home&failed#form-discount';</script>";
         } else if(isset($_GET["about"]) == "about"){
-            echo "<script type='text/javascript'>window.top.location='index.php?about&failed';</script>";
+            echo "<script type='text/javascript'>window.top.location='index.php?about&failed#form-discount';</script>";
+        } else if(isset($_GET["service"]) == "service"){
+            echo "<script type='text/javascript'>window.top.location='index.php?service&failed#form-discount';</script>";
         } else{
-            echo "<script type='text/javascript'>window.top.location='index.php?home&failed';</script>";
+            echo "<script type='text/javascript'>window.top.location='index.php?home&failed#form-discount';</script>";
         }
     } else {
             mysqli_query($connection, "INSERT INTO customer VALUES('','$name','$phone','$email','$message','$date')");
             if(isset($_GET["home"]) == "home" ){
-                echo "<script type='text/javascript'>window.top.location='index.php?home&success';</script>";
+                echo "<script type='text/javascript'>window.top.location='index.php?home&success#form-discount';</script>";
             } else if(isset($_GET["about"]) == "about"){
-                echo "<script type='text/javascript'>window.top.location='index.php?about&success';</script>";
+                echo "<script type='text/javascript'>window.top.location='index.php?about&success#form-discount';</script>";
+            } else if(isset($_GET["service"]) == "service"){
+                echo "<script type='text/javascript'>window.top.location='index.php?service&success#form-discount';</script>";
             } else{
-                echo "<script type='text/javascript'>window.top.location='index.php?home&success';</script>";
+                echo "<script type='text/javascript'>window.top.location='index.php?home&success#form-discount';</script>";
             }
         }
 
     }
-    
-    
-    
-    
 
 $post = mysqli_query($connection, "SELECT * FROM post");
 if(mysqli_num_rows($post)==0) header("location:index.php");
@@ -48,7 +39,7 @@ $row_post = mysqli_fetch_array($post);
 
 <div class="container-fluid content-3">
     <div class="container">
-        <div class="row form">
+        <div class="row form" id="form-discount">
             <div class="col-md-6 my-auto">
                 <h2>
                     Enjoy 25% Seasonal Discount!

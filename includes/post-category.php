@@ -1,17 +1,20 @@
 <?php
+    $category_id = $_GET["category"];
+
     $per_page = 4;
     $cur_page = 1;
-    if(isset($_GET["page"])){
-      $cur_page = $_GET["page"];
+    if(isset($_GET["page-category"])){
+      $cur_page = $_GET["page-category"];
       $cur_page = ($cur_page > 1) ? $cur_page : 1;
     }
   
-    $total_data = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM post"));
+    $total_data = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM post WHERE category_id = '$category_id"));
     $total_page = ceil($total_data/$per_page);
     $offset     = ($cur_page - 1) * $per_page;
 
     $post = mysqli_query($connection, "SELECT post.*, category.category_name, category.icon FROM post, category 
-                            WHERE post.category_id = category.id ORDER BY id DESC LIMIT $per_page OFFSET $offset");
+                            WHERE post.category_id = category.id AND post.category_id = '$category_id'
+                            ORDER BY id DESC LIMIT $per_page OFFSET $offset");
 
 ?>
 
@@ -63,7 +66,7 @@
                     <ul class="pagination justify-content-center">
                         <?php if($cur_page > 1) {?>
                             <li class="page-item">
-                                <a class="page-link" href="index.php?blog&page=<?php echo $cur_page - 1 ?>"><i class="fas fa-chevron-left"></i></a>
+                                <a class="page-link" href="index.php?page-category=<?php echo ($cur_page - 1)."&category=".$category_id  ?>"><i class="fas fa-chevron-left"></i></a>
                             </li>
                         <?php } else { ?>
                             <li class="page-item disabled">
@@ -71,11 +74,11 @@
                             </li>
                         <?php } ?>
                         <?php for($i=1; $i<=$total_page; $i++){ ?>
-                        <li class="page-item"><a class="page-link" href="index.php?blog&page=<?php echo $i ?>"><?php echo $i ?></a></li>
+                        <li class="page-item"><a class="page-link" href="index.php?page-category=<?php echo $i."&category=".$category_id ?>"><?php echo $i ?></a></li>
                         <?php } ?>
                         <?php if($cur_page < $total_page) {?>
                             <li class="page-item">
-                                <a class="page-link" href="index.php?blog&page=<?php echo $cur_page + 1 ?>"><i class="fas fa-chevron-right"></i></a>
+                                <a class="page-link" href="index.php?page-category=<?php echo ($cur_page + 1)."&category=".$category_id  ?>"><i class="fas fa-chevron-right"></i></a>
                             </li>
                         <?php } else { ?>
                             <li class="page-item disabled">

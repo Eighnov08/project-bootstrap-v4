@@ -1,4 +1,4 @@
-.banner a, .content-3 a, .content-3 .estimate, .content-blog .card .btn-card-blog, .content-blog .content-blog-detail .detail .media-detail .comment,
+.banner a, .content-3 a, .content-3 .estimate, .content-blog .content-blog-detail .detail .media-detail .comment,
 .content-blog .content-blog-detail .detail .form-detail .comment, .content-blog .content-blog-detail .detail .media-detail .btn-card-blog,
 .content-blog .content-blog-detail .detail .form-detail .btn-card-blog, .contact .form-contact a {
   text-decoration: none !important;
@@ -225,9 +225,6 @@
       margin: 0%;
       padding: 5% 0%;
       color: black; }
-    .content-blog .card .btn-card-blog {
-      background: white;
-      color: black; }
   .content-blog .category {
     border: 1px solid #ececec;
     border-radius: 1%;
@@ -252,6 +249,8 @@
         font-weight: bold; }
     .content-blog .category .list-group-category {
       border-bottom: 1px dotted #e6e6e6; }
+      .content-blog .category .list-group-category:hover {
+        background: #ebebeb; }
       .content-blog .category .list-group-category p {
         margin: 0%; }
   .content-blog .list-group-item {
@@ -287,11 +286,6 @@
       list-style: none;
       float: left;
       margin-right: 3%; }
-  .content-blog .pagination .page-link {
-    border: none;
-    background: transparent; }
-  .content-blog .pagination .page-item.active .page-link {
-    background-color: #b07cc5; }
 
 .contact .map {
   height: 500px; }

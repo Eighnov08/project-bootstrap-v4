@@ -1,3 +1,7 @@
+<?php
+    $category = mysqli_query($connection, "SELECT * FROM category ORDER BY id ASC");
+?>
+
 <div class="category">
     <form>
         <div class="d-flex my-2 my-lg-0 pt-4">
@@ -44,26 +48,14 @@
         Post Categories
     </p>
     <ul class="list-group">
-        <li class="list-group-item list-group-category">Technology
-            <p class=" float-right">29</p>
-        </li>
-        <li class="list-group-item list-group-category">Lifestyle
-            <p class=" float-right">29</p>
-        </li>
-        <li class="list-group-item list-group-category">Art
-            <p class=" float-right">29</p>
-        </li>
-        <li class="list-group-item list-group-category">Fashion
-            <p class=" float-right">29</p>
-        </li>
-        <li class="list-group-item list-group-category">Food
-            <p class=" float-right">29</p>
-        </li>
-        <li class="list-group-item list-group-category">Architecture
-            <p class=" float-right">29</p>
-        </li>
-        <li class="list-group-item list-group-category">Adventure
-            <p class=" float-right">29</p>
-        </li>
+        <?php if(mysqli_num_rows($category)>0) {?>
+            <?php while($row_cat=mysqli_fetch_array($category)) {?>
+                <?php $all_cat=mysqli_query($connection, "SELECT * FROM post WHERE category_id = $row_cat[id]") ?>
+                <?php $num_row=mysqli_num_rows($all_cat) ?>
+                <a style="text-decoration:none" href="index.php?category=<?php echo $row_cat["id"] ?>"><li class="list-group-item list-group-category pl-2"><?php echo $row_cat["category_name"] ?>
+                    <p class=" float-right pr-2"><?php echo $num_row ?></p>
+                </li></a>
+            <?php } ?>
+        <?php } ?>
     </ul>
 </div>

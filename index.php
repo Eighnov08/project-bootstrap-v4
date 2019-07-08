@@ -15,11 +15,11 @@
     <?php include "includes/nav.php"; ?>
     <!-- CONTENT -->
     <?php
-        if (isset($_GET["home"]) || isset($_GET["page"])) {include "home.php";}
+        if (isset($_GET["home"])) {include "home.php";}
         else if (isset($_GET["about"])) {include "about.php";}
         else if (isset($_GET["service"])) {include "services.php";}
         else if (isset($_GET["gallery"])) {include "gallery.php";}
-        else if (isset($_GET["blog"] )) {include "blog.php";}
+        else if (isset($_GET["blog"]) || isset($_GET["page"]) || isset($_GET["category"]) || isset($_GET["page-category"])) {include "blog.php";}
         else if (isset($_GET["blog-detail"] )) {include "blog-detail.php";}
         else if (isset($_GET["contact"])) {include "contact.php";}
         else {include "home.php";}

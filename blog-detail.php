@@ -16,7 +16,7 @@
         <div class="container content-blog pb-5">
             <div class="row content-blog-detail">
                 <div class="col-md-8 detail">
-                    <img src="images/blog/feature-img5.jpg" class="img-fluid w-100 mb-2" alt="">
+                    <img src="images/blog/<?php echo $row_detail["image"] ?>" class="img-fluid w-100 mb-2" alt="">
                     <ul class="ul-blog-detail">
                         <li class="li-blog-detail">Mark Wiens&nbsp;&nbsp;<i class="fas fa-user-circle"></i></li>
                         <li class="li-blog-detail"><?php echo substr(tanggal_indonesia($row_detail["date"]), 0, 20) ?>&nbsp;&nbsp;<i class="fas fa-calendar-alt"></i></li>
@@ -30,6 +30,7 @@
                     <p>
                         <?php echo $row_detail["description"] ?>
                     </p>
+                    <a href="index.php?blog" style="text-decoration:none"><button type="button" class="btn btn-outline-info btn-lg btn-block">Back</button></a>
                     <div class="media-detail my-5">
                         <h5 class="text-center mb-5">
                             <?php echo $jumlah_comment ?> Comments
