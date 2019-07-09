@@ -7,7 +7,7 @@
         <div class="col-md-12">
             <?php if(mysqli_num_rows($gallery)>0) {?>
                 <?php while($row_gallery=mysqli_fetch_array($gallery)) {?>
-                    <a data-fancybox="gallery" data-caption="<?php echo $row_gallery["caption"] ?>" href="images/elements/<?php echo $row_gallery["image"] ?>"><img class="py-3" src="images/elements/<?php echo $row_gallery["image"] ?>"></a>
+                    <a data-fancybox="gallery" data-caption="<?php echo $row_gallery["caption"] ?>" href="images/elements/<?php echo $row_gallery["image"] ?>"><img class="py-3 px-1" src="images/elements/<?php echo $row_gallery["image"] ?>"></a>
                 <?php } ?>
             <?php } ?>
         </div>

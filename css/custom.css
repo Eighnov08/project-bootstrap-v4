@@ -1,6 +1,6 @@
 .banner a, .content-3 a, .content-3 .estimate, .content-blog .content-blog-detail .detail .media-detail .comment,
 .content-blog .content-blog-detail .detail .form-detail .comment, .content-blog .content-blog-detail .detail .media-detail .btn-card-blog,
-.content-blog .content-blog-detail .detail .form-detail .btn-card-blog, .contact .form-contact a {
+.content-blog .content-blog-detail .detail .form-detail .btn-card-blog {
   text-decoration: none !important;
   padding: 2% 5%;
   display: inline-block;
@@ -99,12 +99,18 @@
   .content-4 .text-muted {
     margin-bottom: 0%; }
   .content-4 .content-4-2 img {
-    width: 13%; }
+    width: 13%;
+    transition: transform .8s; }
+  .content-4 .content-4-2 .logoboot:hover {
+    transform: scale(1.2); }
   .content-4 .content-4-3 h2 {
     float: left; }
   .content-4 .premium img {
     width: 15%;
-    margin: 10% 2%; }
+    margin: 10% 2%;
+    transition: transform .8s; }
+    .content-4 .premium img:hover {
+      transform: scale(1.1); }
 
 .content-5 {
   background: url(../images/bg-content-5-lg.png) no-repeat center; }
@@ -172,7 +178,10 @@
 
 .gallery img {
   width: 20%;
-  margin: 0% 1%; }
+  margin: 0% 1%;
+  transition: transform .8s; }
+  .gallery img:hover {
+    transform: scale(1.1); }
 
 .banner-blog {
   background: url(../images/blog/blog-home-banner.jpg) no-repeat center;
@@ -199,15 +208,6 @@
       list-style: none;
       float: left;
       margin-right: 3%; }
-  .content-blog .content-banner1 {
-    background: url(../images/blog/cat-widget1.jpg) no-repeat center;
-    background-size: 100%; }
-  .content-blog .content-banner2 {
-    background: url(../images/blog/cat-widget2.jpg) no-repeat center;
-    background-size: 100%; }
-  .content-blog .content-banner3 {
-    background: url(../images/blog/cat-widget3.jpg) no-repeat center;
-    background-size: 100%; }
   .content-blog .rgba {
     background: rgba(0, 0, 0, 0.7) center;
     padding: 10%; }
@@ -302,11 +302,14 @@
   height: 20%; }
 .contact textarea {
   width: 100%; }
-.contact .form-contact a {
+.contact .form-contact .btn-contact {
+  padding: 1% 3%;
   background: #8687e4;
   border: 1px solid #8687e4;
   border-radius: 50rem;
   color: white; }
+  .contact .form-contact .btn-contact:hover {
+    background: #7476dd; }
 
 .content-5 .btn-primary:hover,
 .content-5 .btn-primary:focus {

@@ -10,11 +10,11 @@
     <div class="row content-4-2">
         <div class="col-md-12">
             <img src="images/bootstrap small.png" class="img-fluid logoboot img-thumbnail">
-            <img src="images/arrow.png" class="img-fluid px-2">
+            <img src="images/arrow.png" class="img-fluid px-3">
             <img src="images/bootstrap small.png" class="img-fluid logoboot img-thumbnail">
-            <img src="images/arrow.png" class="img-fluid px-2">
+            <img src="images/arrow.png" class="img-fluid px-3">
             <img src="images/bootstrap small.png" class="img-fluid logoboot img-thumbnail">
-            <img src="images/arrow.png" class="img-fluid px-2">
+            <img src="images/arrow.png" class="img-fluid px-3">
             <img src="images/bootstrap small.png" class="img-fluid logoboot img-thumbnail">
         </div>
     </div>

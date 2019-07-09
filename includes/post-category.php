@@ -8,7 +8,7 @@
       $cur_page = ($cur_page > 1) ? $cur_page : 1;
     }
   
-    $total_data = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM post WHERE category_id = '$category_id"));
+    $total_data = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM post WHERE category_id = '$category_id'"));
     $total_page = ceil($total_data/$per_page);
     $offset     = ($cur_page - 1) * $per_page;
 
@@ -27,9 +27,9 @@
             <div class="col-md-4">
                 <div class="list-blog">
                     <ul class="list-group text-right mr-4 d-none d-md-block">
-                        <li class="list-group-item">Mark Wiens&nbsp;&nbsp;<i class="fas fa-user-circle"></i></li>
+                        <li class="list-group-item"><?php echo $row_post["name"] ?>&nbsp;&nbsp;<i class="fas fa-user-circle"></i></li>
                         <li class="list-group-item"><?php echo substr(tanggal_indonesia($row_post["date"]), 0, 20) ?>&nbsp;&nbsp;<i class="fas fa-calendar-alt"></i></li>
-                        <li class="list-group-item">2M Views&nbsp;&nbsp;<i class="fas fa-eye"></i></li>
+                        <li class="list-group-item"><?php echo $row_post["view"] ?> Views&nbsp;&nbsp;<i class="fas fa-eye"></i></li>
                         <li class="list-group-item"><?php echo $num_row ?> Comments&nbsp;&nbsp;<i class="fas fa-comments"></i></li>
                         <li class="list-group-item"><?php echo $row_post["category_name"] ?>&nbsp;&nbsp;<i class="<?php echo $row_post["icon"] ?>"></i></li>
                     </ul>
@@ -40,9 +40,9 @@
                     <img src="images/blog/<?php echo $row_post["image"] ?>" class="card-img-top">
                     <!-- untuk responsive small -->
                     <ul class="ul-blog d-block d-md-none">
-                        <li class="li-blog">Mark Wiens&nbsp;&nbsp;<i class="fas fa-user-circle"></i></li>
+                        <li class="li-blog"><?php echo $row_post["name"] ?>&nbsp;&nbsp;<i class="fas fa-user-circle"></i></li>
                         <li class="li-blog"><?php echo substr(tanggal_indonesia($row_post["date"]), 0, 20) ?>&nbsp;&nbsp;<i class="fas fa-calendar-alt"></i></li>
-                        <li class="li-blog">2M Views&nbsp;&nbsp;<i class="fas fa-eye"></i></li>
+                        <li class="li-blog"><?php echo $row_post["view"] ?> Views&nbsp;&nbsp;<i class="fas fa-eye"></i></li>
                         <li class="li-blog"><?php echo $num_row ?> Comments&nbsp;&nbsp;<i class="fas fa-comments"></i></li>
                         <li class="li-blog"><?php echo $row_post["category_name"] ?>&nbsp;&nbsp;<i class="<?php echo $row_post["icon"] ?>"></i></li>
                     </ul>

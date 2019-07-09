@@ -1,4 +1,5 @@
 <?php
+    ob_start();
     include "includes/config.php";
     include "includes/head.php";
     include "function/function_tgl_indo.php";
@@ -37,4 +38,5 @@
 
 <?php
     mysqli_close($connection);
+    ob_end_flush();
 ?>

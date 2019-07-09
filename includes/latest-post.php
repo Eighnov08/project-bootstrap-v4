@@ -18,7 +18,7 @@
 
 <?php if(mysqli_num_rows($post)>0) {?>
     <?php while($row_post=mysqli_fetch_array($post)) {?>
-        <?php $cmnt = mysqli_query($connection, "SELECT * FROM comment WHERE post_id = $row_post[id]"); ?>
+        <?php $cmnt = mysqli_query($connection, "SELECT * FROM comment WHERE post_id = $row_post[id] AND status = '1'"); ?>
         <?php $num_row = mysqli_num_rows($cmnt); ?>
         <div class="row">
             <div class="col-md-4">
@@ -26,7 +26,7 @@
                     <ul class="list-group text-right mr-4 d-none d-md-block">
                         <li class="list-group-item"><?php echo $row_post["name"] ?>&nbsp;&nbsp;<i class="fas fa-user-circle"></i></li>
                         <li class="list-group-item"><?php echo substr(tanggal_indonesia($row_post["date"]), 0, 20) ?>&nbsp;&nbsp;<i class="fas fa-calendar-alt"></i></li>
-                        <li class="list-group-item">2M Views&nbsp;&nbsp;<i class="fas fa-eye"></i></li>
+                        <li class="list-group-item"><?php echo $row_post["view"] ?> Views&nbsp;&nbsp;<i class="fas fa-eye"></i></li>
                         <li class="list-group-item"><?php echo $num_row ?> Comments&nbsp;&nbsp;<i class="fas fa-comments"></i></li>
                         <li class="list-group-item"><?php echo $row_post["category_name"] ?>&nbsp;&nbsp;<i class="<?php echo $row_post["icon"] ?>"></i></li>
                     </ul>
@@ -39,7 +39,7 @@
                     <ul class="ul-blog d-block d-md-none">
                         <li class="li-blog"><?php echo $row_post["name"] ?>&nbsp;&nbsp;<i class="fas fa-user-circle"></i></li>
                         <li class="li-blog"><?php echo substr(tanggal_indonesia($row_post["date"]), 0, 20) ?>&nbsp;&nbsp;<i class="fas fa-calendar-alt"></i></li>
-                        <li class="li-blog">2M Views&nbsp;&nbsp;<i class="fas fa-eye"></i></li>
+                        <li class="li-blog"><?php echo $row_post["view"] ?> Views&nbsp;&nbsp;<i class="fas fa-eye"></i></li>
                         <li class="li-blog"><?php echo $num_row ?> Comments&nbsp;&nbsp;<i class="fas fa-comments"></i></li>
                         <li class="li-blog"><?php echo $row_post["category_name"] ?>&nbsp;&nbsp;<i class="<?php echo $row_post["icon"] ?>"></i></li>
                     </ul>
