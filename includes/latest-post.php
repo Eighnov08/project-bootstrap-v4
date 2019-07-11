@@ -2,8 +2,8 @@
     $per_page = 4;
     $cur_page = 1;
     if(isset($_GET["page"])){
-      $cur_page = $_GET["page"];
-      $cur_page = ($cur_page > 1) ? $cur_page : 1;
+      $current_page = $_GET["page"];
+      $cur_page = ($current_page > 1) ? $current_page : 1;
     }
   
     $total_data = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM post"));
@@ -71,7 +71,11 @@
                             </li>
                         <?php } ?>
                         <?php for($i=1; $i<=$total_page; $i++){ ?>
-                        <li class="page-item"><a class="page-link" href="index.php?blog&page=<?php echo $i ?>"><?php echo $i ?></a></li>
+                            <?php if($i==$cur_page){ ?>
+                                <li class="page-item active" aria-current="page"><a class="page-link"  href="index.php?blog&page=<?php echo $i ?>"><?php echo $i ?></a></li>
+                            <?php } else { ?>
+                                <li class="page-item"><a class="page-link" href="index.php?blog&page=<?php echo $i ?>"><?php echo $i ?></a></li>
+                            <?php } ?>
                         <?php } ?>
                         <?php if($cur_page < $total_page) {?>
                             <li class="page-item">

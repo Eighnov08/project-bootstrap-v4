@@ -6,8 +6,12 @@
 <script src="js/sb-admin.js"></script>
 <script src="js/demo/dashboard-demo.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<script src="js/plugins/ckeditor/ckeditor.js"></script>
 <script>
     $(document).ready( function () {
         $('#table_admin').DataTable();
     } );
+</script>
+<script>
+        CKEDITOR.replace( 'editor1' );
 </script>

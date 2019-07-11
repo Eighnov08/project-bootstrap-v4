@@ -69,7 +69,7 @@
   background: url(../images/discount-bg.png) no-repeat center;
   color: white; }
   .content-3 .form-control::-webkit-input-placeholder {
-    color: white; }
+    color: #b9b9b9; }
   .content-3 a {
     background: white;
     color: black; }
@@ -80,7 +80,7 @@
   .content-3 .form {
     padding: 10% 0%; }
   .content-3 .form-control {
-    background: transparent;
+    background-color: #e8f0fe;
     color: white; }
 
 /*support mozilla*/

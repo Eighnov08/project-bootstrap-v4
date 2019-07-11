@@ -1,3 +1,14 @@
+<?php
+    if(isset($_POST["submit"])){
+        $username = $_POST["username"];
+        $password = md5($_POST["password"]);
+        mysqli_query($connection, "INSERT INTO admin VALUES('','$username','$password')");
+        header("location:index.php?administrator");
+    }
+
+    $admin = mysqli_query($connection, "SELECT * FROM admin ORDER BY id DESC");
+?>
+
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">Blog &raquo; Administrator</h1>
@@ -44,12 +55,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>rullyfebrian</td>
-                                <td>5e8a92d9804b9ae35bcaaccf00f6dfef</td>
-                                <td class="center"><a href="index.php?administrator-update=" class="btn btn-primary btn-xs" type="button">Update</a></td>
-                                <td class="center"><a href="index.php?administrator-delete=" class="btn btn-primary btn-xs" type="button">Delete</a></td>
-                            </tr>
+                            <?php if(mysqli_num_rows($admin)>0) {?>
+                                <?php while($row_admin=mysqli_fetch_array($admin)) {?>
+                                    <tr>
+                                        <td><?php echo $row_admin["username"] ?></td>
+                                        <td><?php echo $row_admin["password"] ?></td>
+                                        <td class="center"><a href="index.php?update-admin=<?php echo $row_admin["id"] ?>" class="btn btn-primary btn-xs" type="button">Update</a></td>
+                                        <td class="center"><a href="index.php?delete-admin=<?php echo $row_admin["id"] ?>" class="btn btn-primary btn-xs" type="button">Delete</a></td>
+                                    </tr>
+                                <?php } ?>
+                            <?php } ?>
                         </tbody>
                     </table>
                 </div>

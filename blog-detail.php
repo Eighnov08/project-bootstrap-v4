@@ -87,7 +87,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Message" name="message"></textarea>
+                                <textarea class="form-control" id="myeditor" rows="3" placeholder="Message" name="message"></textarea>
                             </div>
                             <button style="none" type="submit" class="float-right btn-comment comment" name="submit">Post Comment</button>
                             <input type="hidden" name="post_id" value="<?php echo $row_detail["id"] ?>">

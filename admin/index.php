@@ -18,9 +18,13 @@
             else if (isset($_GET["category-update"])) include("page/blog/category-update.php");
             else if (isset($_GET["category-delete"])) include("page/blog/category-delete.php");
             else if (isset($_GET["post"])) include("page/blog/post.php");
+            else if (isset($_GET["post-delete"])) include("page/blog/post-delete.php");
+            else if (isset($_GET["post-update"])) include("page/blog/post-update.php");
             else if (isset($_GET["comment"])) include("page/blog/comment.php");
             else if (isset($_GET["user"])) include("page/user/index.php");
             else if (isset($_GET["administrator"])) include("page/administrator/index.php");
+            else if (isset($_GET["delete-admin"])) include("page/administrator/delete-admin.php");
+            else if (isset($_GET["update-admin"])) include("page/administrator/update-admin.php");
             else include("page/home/index.php");
             ?>
         </div>

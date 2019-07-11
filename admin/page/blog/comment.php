@@ -27,7 +27,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Reply</label>
-                                <textarea class="form-control" rows="3" name="reply"></textarea>
+                                <textarea class="form-control" rows="3" name="reply" id="editor1"></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Status</label>
