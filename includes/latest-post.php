@@ -1,4 +1,5 @@
 <?php
+    // PAGINATION POST BLOG
     $per_page = 4;
     $cur_page = 1;
     if(isset($_GET["page"])){
@@ -9,7 +10,7 @@
     $total_data = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM post"));
     $total_page = ceil($total_data/$per_page);
     $offset     = ($cur_page - 1) * $per_page;
-
+    
     $post = mysqli_query($connection, "SELECT post.*, category.category_name, category.icon FROM post, category 
                             WHERE post.category_id = category.id ORDER BY id DESC LIMIT $per_page OFFSET $offset");
 

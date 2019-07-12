@@ -17,7 +17,8 @@
                              comment.post_id = '$detail_id' AND status = '1' ORDER BY id DESC LIMIT $per_page OFFSET $offset");
 
     // JUMLAH COMMENT DETAIL
-    $jumlah_comment = mysqli_num_rows($comment);
+    $jumlah_comment = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM comment WHERE comment.post_id = '$detail_id' 
+                                                    AND status = '1'"));
     
     // TAMPIL DETAIL BLOG
     $detail = mysqli_query($connection, "SELECT post.*, category.category_name, category.icon FROM post, category 
@@ -90,12 +91,13 @@
                                         </div>
                                         <a href="" class="btn-card-blog">Reply</a>
                                     </li>
+                                    <hr>
                                 <?php } ?>
                             <?php } ?>
                         </ul>
                         <?php if(isset($total_page)) {?>
                             <?php if($total_page > 1) {?>
-                                <nav aria-label="...">
+                                <nav aria-label="..." class="pt-5">
                                     <ul class="pagination justify-content-center">
                                         <?php if($cur_page > 1) {?>
                                             <li class="page-item">
