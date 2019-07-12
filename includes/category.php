@@ -2,7 +2,7 @@
     $category = mysqli_query($connection, "SELECT * FROM category ORDER BY id ASC LIMIT 3");
 ?>
 
-<div class="row text-center pt-5">
+<div class="row text-center pt-5" id="page">
     <?php if(mysqli_num_rows($category)>0) {?>
         <?php while($row_cat=mysqli_fetch_array($category)) {?>
             <div class="col-md-4">

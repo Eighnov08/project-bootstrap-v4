@@ -63,7 +63,7 @@
                     <ul class="pagination justify-content-center">
                         <?php if($cur_page > 1) {?>
                             <li class="page-item">
-                                <a class="page-link" href="index.php?blog&page=<?php echo $cur_page - 1 ?>"><i class="fas fa-chevron-left"></i></a>
+                                <a class="page-link" href="index.php?blog&page=<?php echo $cur_page - 1 ?>#page"><i class="fas fa-chevron-left"></i></a>
                             </li>
                         <?php } else { ?>
                             <li class="page-item disabled">
@@ -72,14 +72,14 @@
                         <?php } ?>
                         <?php for($i=1; $i<=$total_page; $i++){ ?>
                             <?php if($i==$cur_page){ ?>
-                                <li class="page-item active" aria-current="page"><a class="page-link"  href="index.php?blog&page=<?php echo $i ?>"><?php echo $i ?></a></li>
+                                <li class="page-item active" aria-current="page"><a class="page-link"  href="index.php?blog&page=<?php echo $i ?>#page"><?php echo $i ?></a></li>
                             <?php } else { ?>
-                                <li class="page-item"><a class="page-link" href="index.php?blog&page=<?php echo $i ?>"><?php echo $i ?></a></li>
+                                <li class="page-item"><a class="page-link" href="index.php?blog&page=<?php echo $i ?>#page"><?php echo $i ?></a></li>
                             <?php } ?>
                         <?php } ?>
                         <?php if($cur_page < $total_page) {?>
                             <li class="page-item">
-                                <a class="page-link" href="index.php?blog&page=<?php echo $cur_page + 1 ?>"><i class="fas fa-chevron-right"></i></a>
+                                <a class="page-link" href="index.php?blog&page=<?php echo $cur_page + 1 ?>#page"><i class="fas fa-chevron-right"></i></a>
                             </li>
                         <?php } else { ?>
                             <li class="page-item disabled">
