@@ -78,7 +78,6 @@ $row_post = mysqli_fetch_array($post);
                         <button aria-hidden="true" data-dismiss="alert" class="close" type="button">&times;</button>
                         Lengkapi Data Anda!
                     </div>
-                    <?php } else {?>
                     <?php } ?>
 
                     <button style="none" type="submit" class="estimate btn btn-primary" name="submit">GET ESTIMATE</button>

@@ -75,7 +75,7 @@
                                 <p><img src="../images/blog/<?php echo $row_update["image"] ?>" width="200" class="img-responsive" /></p>
                                 <input type="file" name="file" />
                             </div>
-                            <button type="submit" name="update" class="btn btn-success">Update</button>
+                            <button type="submit" name="update" class="btn btn-success"  onclick="return confirm('Update Data Post?')">Update</button>
                             <button type="reset" class="btn btn-warning">Reset</button>
                             <input type="hidden" name="post_id" value="<?php echo $row_update["id"] ?>">
                         </form>
@@ -117,7 +117,7 @@
                                         <td><?php echo $row_post["view"] ?></td>
                                         <td><img src="../images/blog/<?php echo $row_post["image"] ?>" width="88" class="img-responsive" /></td>
                                         <td class="center"><a href="index.php?post-update=<?php echo $row_post["id"] ?>" class="btn btn-primary btn-xs" type="button">Update</a></td>
-                                        <td class="center"><a href="index.php?post-delete=<?php echo $row_post["id"] ?>" class="btn btn-primary btn-xs" type="button">Delete</a></td>
+                                        <td class="center"><a href="index.php?post-delete=<?php echo $row_post["id"] ?>" class="btn btn-primary btn-xs" type="button" onclick="return confirm('Delete Data Post?')">Delete</a></td>
                                     </tr>
                                 <?php $no++; } ?>
                             <?php } ?>

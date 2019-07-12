@@ -57,7 +57,7 @@
                                 </p>
                                 <input type="file" name="file" />
                             </div>
-                            <button type="submit" name="update" class="btn btn-success">Update</button>
+                            <button type="submit" name="update" class="btn btn-success" onclick="return confirm('Update Category?')">Update</button>
                             <button type="reset" class="btn btn-warning">Reset</button>
                             <input type="hidden" name="category_id" value="<?php echo $row_update["id"] ?>">
                         </form>
@@ -93,7 +93,7 @@
                                             <?php } ?>
                                         </td>
                                         <td class="center"><a href="index.php?category-update=<?php echo $row_cat["id"] ?>" class="btn btn-primary btn-xs" type="button">Update</a></td>
-                                        <td class="center"><a href="index.php?category-delete=<?php echo $row_cat["id"] ?>" class="btn btn-primary btn-xs" type="button">Delete</a></td>
+                                        <td class="center"><a href="index.php?category-delete=<?php echo $row_cat["id"] ?>" class="btn btn-primary btn-xs" type="button" onclick="return confirm('Delete Category?')">Delete</a></td>
                                     </tr>
                                 <?php } ?>
                             <?php } ?>

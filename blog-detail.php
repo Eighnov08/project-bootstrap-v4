@@ -17,8 +17,13 @@
         $email = $_POST["email"];
         $reply = $_POST["message"];
         $date = date("Y-m-d H:i:s");
-        mysqli_query($connection, "INSERT INTO comment VALUES('','$post_id','$name','$phone','$email','$reply','0','$date')");
-        header("location:index.php?blog-detail=$post_id");
+        if(!empty($name) && !empty($phone) && !empty($email) && !empty($reply)){
+            mysqli_query($connection, "INSERT INTO comment VALUES('','$post_id','$name','$phone','$email','$reply','0','$date')");
+            header("location:index.php?blog-detail=$post_id&success#comment-success");
+        } else {
+            header("location:index.php?blog-detail=$post_id&failed#comment-failed");
+        }
+        
     }
 ?>
 
@@ -32,7 +37,7 @@
                     <img src="images/blog/<?php echo $row_detail["image"] ?>" class="img-fluid w-100 mb-2" alt="">
                     <ul class="ul-blog-detail">
                         <li class="li-blog-detail"><?php echo $row_detail["name"] ?>&nbsp;&nbsp;<i class="fas fa-user-circle"></i></li>
-                        <li class="li-blog-detail"><?php echo substr(tanggal_indonesia($row_detail["date"]), 0, 20) ?>&nbsp;&nbsp;<i class="fas fa-calendar-alt"></i></li>
+                        <li class="li-blog-detail"><?php echo substr(tanggal_indonesia($row_detail["date"]), 7, 18) ?>&nbsp;&nbsp;<i class="fas fa-calendar-alt"></i></li>
                         <li class="li-blog-detail"><?php echo $row_detail["view"] ?> Views&nbsp;&nbsp;<i class="fas fa-eye"></i></li>
                         <li class="li-blog-detail"><?php echo $jumlah_comment ?> Comments&nbsp;&nbsp;<i class="fas fa-comments"></i></li>
                         <li class="li-blog-detail"><?php echo $row_detail["category_name"] ?>&nbsp;&nbsp;<i class="<?php echo $row_detail["icon"] ?>"></i></li>
@@ -71,8 +76,8 @@
                         </ul>
                     </div>
                     <div class="form-detail mb-5">
-                        <form class="mb-5 text-center" method="post">
-                            <h3 class="pb-3">
+                        <form class="mb-5 text-center" method="post" id="comment-failed">
+                            <h3 class="pb-3" id="comment-success">
                                 Leave a Comment
                             </h3>
                             <div class="form-group">
@@ -89,6 +94,15 @@
                             <div class="form-group">
                                 <textarea class="form-control" id="myeditor" rows="3" placeholder="Message" name="message"></textarea>
                             </div>
+                            <?php if(isset($_GET["failed"])) {?>
+                                <div class="alert alert-danger" role="alert">
+                                    Lengkapi Data Komentar!
+                                </div>
+                            <?php } else if(isset($_GET["success"])) {?>
+                                <div class="alert alert-success" role="alert">
+                                    Komentar Anda Sedang Dimoderasi
+                                </div>
+                            <?php } ?>
                             <button style="none" type="submit" class="float-right btn-comment comment" name="submit">Post Comment</button>
                             <input type="hidden" name="post_id" value="<?php echo $row_detail["id"] ?>">
                         </form>

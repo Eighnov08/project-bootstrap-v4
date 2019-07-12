@@ -5,10 +5,14 @@
         
         $file_name = $_FILES["file"]["name"];
         $tmp_name = $_FILES["file"]["tmp_name"];
-        move_uploaded_file($tmp_name, "../images/blog/".$file_name);
 
-        mysqli_query($connection, "INSERT INTO category VALUES ('','$category_name','$icon','$file_name')");
-        header("location:index.php?category");
+        if($file_name!=="" || !empty($file_name) && !empty($category_name) && !empty($icon)){
+            move_uploaded_file($tmp_name, "../images/blog/".$file_name);
+            mysqli_query($connection, "INSERT INTO category VALUES ('','$category_name','$icon','$file_name')");
+            header("location:index.php?category&success");
+        } else {
+            header("location:index.php?category&failed");
+        }
     }
 
     $category = mysqli_query($connection, "SELECT * FROM category ORDER BY id DESC");
@@ -41,6 +45,15 @@
                                 <label>Image</label>
                                 <input type="file" name="file" />
                             </div>
+                            <?php if(isset($_GET["failed"])){ ?>
+                                <div class="alert alert-danger" role="alert">
+                                    Lengkapi Data Category!
+                                </div>
+                            <?php } else if(isset($_GET["success"])) {?>
+                                <div class="alert alert-success" role="alert">
+                                    Category Berhasil Diinput
+                                </div>
+                            <?php } ?>
                             <button type="submit" name="submit" class="btn btn-success">Save</button>
                             <button type="reset" class="btn btn-warning">Reset</button>
                         </form>
@@ -76,7 +89,7 @@
                                             <?php } ?>
                                         </td>
                                         <td class="center"><a href="index.php?category-update=<?php echo $row_cat["id"] ?>" class="btn btn-primary btn-xs" type="button">Update</a></td>
-                                        <td class="center"><a href="index.php?category-delete=<?php echo $row_cat["id"] ?>" class="btn btn-primary btn-xs" type="button">Delete</a></td>
+                                        <td class="center"><a href="index.php?category-delete=<?php echo $row_cat["id"] ?>" class="btn btn-primary btn-xs" type="button" onclick="return confirm('Delete Data Category?')">Delete</a></td>
                                     </tr>
                                 <?php } ?>
                             <?php } ?>

@@ -1,19 +1,23 @@
 <?php 
-    if(isset($_POST["submit"])){
+    if(isset($_POST["update"])){
+        $comment_id = $_POST["comment_id"];
         $post_id = $_POST["post_id"];
-        $name = $_POST["user"];
+        $name = $_POST["name"];
         $phone = $_POST["phone"];
         $email = $_POST["email"];
         $reply = $_POST["reply"];
         $status = $_POST["status"];
         $date = date("Y-m-d H:i:s");
-        if(!empty($post_id) && !empty($name) && !empty($phone) && !empty($email) && !empty($reply)){
-            mysqli_query($connection, "INSERT INTO comment VALUES('','$post_id','$name','$phone','$email','$reply','$status','$date')");
-            header("location:index.php?comment&success#comment-success");
-        } else {
-            header("location:index.php?comment&failed#comment-failed");
-        }
+        mysqli_query($connection, "UPDATE comment SET post_id = '$post_id', name = '$name', phone = '$phone', email = '$email', reply = '$reply',
+                        status = '$status', date = '$date' WHERE id = '$comment_id'");
+        header("location:index.php?comment");
     }
+
+    $comment_id = $_GET["comment-update"];
+    $update = mysqli_query($connection, "SELECT comment.*, post.title FROM comment, post WHERE comment.post_id = post.id
+                            AND comment.id = '$comment_id' AND status = '1'");
+    if(mysqli_num_rows($update)=="") header("location:index.php?comment");
+    $row_update = mysqli_fetch_array($update);
 
     $comment = mysqli_query($connection, "SELECT comment.*, post.title FROM comment, post WHERE comment.post_id = post.id
                                 AND status = '1' ORDER BY id DESC");
@@ -41,51 +45,53 @@
                                     <option value=""> - choose - </option>
                                     <?php if(mysqli_num_rows($post)>0) {?>
                                         <?php while($row_cat=mysqli_fetch_array($post)) {?>
-                                            <option value="<?php echo $row_cat["id"] ?>"> <?php echo $row_cat["title"] ?> </option>
+                                            <option <?php echo $row_update["post_id"]==$row_cat["id"] ? "selected='select'" : "" ?>
+                                            value="<?php echo $row_cat["id"] ?>"> <?php echo $row_cat["title"] ?> </option>
                                         <?php } ?>
                                     <?php } ?>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label>User</label>
-                                <input class="form-control" type="text" name="user" />
+                                <input class="form-control" type="text" name="name" value="<?php echo $row_update["name"] ?>" />
                             </div>
                             <div class="form-group">
                                 <label>Phone</label>
-                                <input class="form-control" type="text" name="phone" />
+                                <input class="form-control" type="text" name="phone" value="<?php echo $row_update["phone"] ?>"/>
                             </div>
                             <div class="form-group">
                                 <label>Email</label>
-                                <input class="form-control" type="email" name="email" />
+                                <input class="form-control" type="email" name="email" value="<?php echo $row_update["email"] ?>" />
                             </div>
-                            <div class="form-group" id="comment-failed">
+                            <div class="form-group">
                                 <label>Reply</label>
-                                <textarea class="form-control" rows="3" name="reply" id="editor1"></textarea>
+                                <textarea class="form-control" rows="3" name="reply" id="editor1"><?php echo $row_update["reply"] ?></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Status</label>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" value="0" name="status" checked /> Not Active
+                                        <input type="radio" value="0" name="status" <?php echo $row_update["status"]=='0' ? "checked" : "" ?>/> Not Active
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" value="1" name="status" /> Active
+                                        <input type="radio" value="1" name="status" <?php echo $row_update["status"]=='1' ? "checked" : "" ?>/> Active
                                     </label>
                                 </div>
                             </div>
                             <?php if(isset($_GET["failed"])){ ?>
-                                <div class="alert alert-danger" role="alert">
+                                <div class="alert alert-danger" role="alert" id="comment-failed">
                                     Lengkapi Data Comment!
                                 </div>
                             <?php } else if(isset($_GET["success"])) {?>
-                                <div class="alert alert-success" role="alert">
+                                <div class="alert alert-success" role="alert" id="comment-success">
                                     Comment Berhasil Diinput
                                 </div>
                             <?php } ?>
-                            <button type="submit" name="submit" class="btn btn-success">Save</button>
+                            <button type="submit" name="update" class="btn btn-success" onclick="return confirm('Update Data Comment?')">Update</button>
                             <button type="reset" class="btn btn-warning">Reset</button>
+                            <input type="hidden" name="comment_id" value="<?php echo $row_update["id"] ?>">
                         </form>
                     </div>
                 </div>
@@ -95,7 +101,7 @@
             <div class="panel-heading">
                 List Data
             </div>
-            <div class="panel-body" id="comment-success">
+            <div class="panel-body">
                 <div class="table-responsive">
                     <table id="table_admin" class="display">
                         <thead>
@@ -107,7 +113,7 @@
                                 <th>Email</th>
                                 <th>Reply</th>
                                 <th>Status</th>
-                                <th>Publish</th>
+                                <th>Datetime</th>
                                 <th>Update</th>
                                 <th>Delete</th>
                             </tr>

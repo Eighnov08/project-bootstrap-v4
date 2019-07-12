@@ -17,7 +17,7 @@
             $_SESSION["admin_username"] = $row["username"];
             header("location:index.php");
         } else {
-            header("location:index.php?failed");
+            header("location:login.php?failed");
         }
     }
 ?>
