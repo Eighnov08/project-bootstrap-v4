@@ -22,6 +22,7 @@
         else if (isset($_GET["gallery"])) {include "gallery.php";}
         else if (isset($_GET["blog"]) || isset($_GET["page"]) || isset($_GET["category"]) || isset($_GET["page-category"])) {include "blog.php";}
         else if (isset($_GET["blog-detail"]) || isset($_GET["page_detail"])) {include "blog-detail.php";}
+        else if (isset($_GET["blog-detail-cat"])) {include "blog_detail_cat.php";}
         else if (isset($_GET["contact"])) {include "contact.php";}
         else {include "home.php";}
     ?>

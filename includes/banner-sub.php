@@ -21,6 +21,8 @@
                         echo $menu_contact;
                     } else if(isset($_GET["blog-detail"])){
                         echo $menu_blog_detail;
+                    } else if(isset($_GET["blog-detail-cat"])){
+                        echo $menu_blog_detail;
                     }?>
                 </h1>
                 <p class="m-0">
@@ -34,6 +36,8 @@
                     } else if(isset($_GET["contact"])){
                         echo $menu_contact;
                     } else if(isset($_GET["blog-detail"])){
+                        echo "Blog &nbsp;<i class='fas fa-arrow-right'></i>&nbsp; Blog Details Page";;
+                    } else if(isset($_GET["blog-detail-cat"])){
                         echo "Blog &nbsp;<i class='fas fa-arrow-right'></i>&nbsp; Blog Details Page";;
                     }?>
                 </p>

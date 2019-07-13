@@ -21,7 +21,7 @@
 
 <?php if(mysqli_num_rows($post)>0) {?>
     <?php while($row_post=mysqli_fetch_array($post)) {?>
-        <?php $cmnt = mysqli_query($connection, "SELECT * FROM comment WHERE post_id = $row_post[id]"); ?>
+        <?php $cmnt = mysqli_query($connection, "SELECT * FROM comment WHERE post_id = $row_post[id] AND status = '1'"); ?>
         <?php $num_row = mysqli_num_rows($cmnt); ?>
         <div class="row">
             <div class="col-md-4">
@@ -50,7 +50,7 @@
                     <div class="card-body-blog">
                         <h5 class="card-title"><?php echo $row_post["title"] ?></h5>
                         <p class="card-text"><?php echo substr($row_post["description"], 0, 150)."..."; ?></p>
-                        <a href="index.php?blog-detail=<?php echo $row_post["id"] ?>" class="btn btn-outline-info">View More</a>
+                        <a href="index.php?blog-detail-cat=<?php echo $row_post["id"] ?>&cat=<?php echo $row_post["category_id"] ?>" class="btn btn-outline-info">View More</a>
                     </div>
                 </div>
             </div>
