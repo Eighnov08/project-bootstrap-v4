@@ -1,7 +1,7 @@
 <?php 
-    if(isset($_GET["customer-delete"])){
-        $customer_id = $_GET["customer-delete"];
-        mysqli_query($connection, "DELETE FROM customer WHERE id = '$customer_id'");
-        header("location:index.php?customer");
+    if(isset($_GET["services-delete"])){
+        $services_id = $_GET["services-delete"];
+        mysqli_query($connection, "DELETE FROM service WHERE id = '$services_id'");
+        header("location:index.php?services");
     }
 ?>

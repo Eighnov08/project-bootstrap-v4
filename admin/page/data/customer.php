@@ -41,7 +41,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Message</label>
-                                <textarea class="form-control" rows="3" name="message"></textarea>
+                                <textarea class="form-control" rows="3" name="message" id="editor1"></textarea>
                             </div>
                             <button type="submit" name="submit" class="btn btn-success">Save</button>
                             <button type="reset" class="btn btn-warning">Reset</button>

@@ -47,7 +47,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Message</label>
-                                <textarea class="form-control" rows="3" name="message"><?php echo $row_update["message"] ?></textarea>
+                                <textarea class="form-control" rows="3" name="message" id="editor1"><?php echo $row_update["message"] ?></textarea>
                             </div>
                             <button type="submit" name="update" class="btn btn-success">Update</button>
                             <button type="reset" class="btn btn-warning">Reset</button>
