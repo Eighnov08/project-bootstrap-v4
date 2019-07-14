@@ -4,6 +4,7 @@
     if(!isset($_SESSION["admin_id"])) header("location:login.php");
     include "../includes/config.php";
     include "../function/function_tgl_indo.php";
+    date_default_timezone_set("Asia/Jakarta");
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +21,9 @@
             else if (isset($_GET["post"])) include("page/blog/post.php");
             else if (isset($_GET["post-delete"])) include("page/blog/post-delete.php");
             else if (isset($_GET["post-update"])) include("page/blog/post-update.php");
+            else if (isset($_GET["customer"])) include("page/data/customer.php");
+            else if (isset($_GET["customer-delete"])) include("page/data/customer-delete.php");
+            else if (isset($_GET["customer-update"])) include("page/data/customer-update.php");
             else if (isset($_GET["comment"])) include("page/blog/comment.php");
             else if (isset($_GET["comment-delete"])) include("page/blog/comment-delete.php");
             else if (isset($_GET["comment-update"])) include("page/blog/comment-update.php");

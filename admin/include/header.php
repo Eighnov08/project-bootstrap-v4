@@ -24,13 +24,21 @@
     <div class="navbar-default navbar-static-side" role="navigation">
         <div class="sidebar-collapse">
             <ul class="nav" id="side-menu">
-                <li><a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Home</a></li>
+                <li><a href="index.php"><i class="fas fa-columns fa-fw"></i>&nbsp;&nbsp;Home</a></li>
                 <li>
-                    <a href="#"><i class="fa fa-pencil-square-o fa-fw"></i> Blog<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fas fa-th-large fa-fw"></i>&nbsp;&nbsp;Blog<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li><a href="index.php?category">Category</a></li>
                         <li><a href="index.php?post">Post</a></li>
                         <li><a href="index.php?comment">Comment</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-users fa-fw"></i>&nbsp;&nbsp;Data<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="index.php?customer">Customer</a></li>
+                        <li><a href="index.php?message">Message</a></li>
+                        <li><a href="index.php?services">Services</a></li>
                     </ul>
                 </li>
             </ul>
