@@ -80,8 +80,7 @@
   .content-3 .form {
     padding: 10% 0%; }
   .content-3 .form-control {
-    background-color: #e8f0fe;
-    color: white; }
+    background-color: #e8f0fe; }
 
 /*support mozilla*/
 .form-control:-moz-input-placeholder {

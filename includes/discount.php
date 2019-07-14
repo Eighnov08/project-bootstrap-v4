@@ -7,26 +7,26 @@ if(isset($_POST["submit"])){
     $message = $_POST["message"];
     $date = date("Y-m-d H:i:s");
 
-    if(empty($name) && empty($phone) && empty($email) && empty($message)){
+    if(!empty($name) && !empty($phone) && !empty($email) && !empty($message)){
+        mysqli_query($connection, "INSERT INTO customer VALUES('','$name','$phone','$email','$message','$date')");
         if(isset($_GET["home"]) == "home" ){
-            echo "<script type='text/javascript'>window.top.location='index.php?home&failed#form-discount';</script>";
+            echo "<script type='text/javascript'>window.top.location='index.php?home&success#form-discount';</script>";
         } else if(isset($_GET["about"]) == "about"){
-            echo "<script type='text/javascript'>window.top.location='index.php?about&failed#form-discount';</script>";
+            echo "<script type='text/javascript'>window.top.location='index.php?about&success#form-discount';</script>";
         } else if(isset($_GET["service"]) == "service"){
-            echo "<script type='text/javascript'>window.top.location='index.php?service&failed#form-discount';</script>";
+            echo "<script type='text/javascript'>window.top.location='index.php?service&success#form-discount';</script>";
         } else{
-            echo "<script type='text/javascript'>window.top.location='index.php?home&failed#form-discount';</script>";
+            echo "<script type='text/javascript'>window.top.location='index.php?home&success#form-discount';</script>";
         }
     } else {
-            mysqli_query($connection, "INSERT INTO customer VALUES('','$name','$phone','$email','$message','$date')");
             if(isset($_GET["home"]) == "home" ){
-                echo "<script type='text/javascript'>window.top.location='index.php?home&success#form-discount';</script>";
+                echo "<script type='text/javascript'>window.top.location='index.php?home&failed#form-discount';</script>";
             } else if(isset($_GET["about"]) == "about"){
-                echo "<script type='text/javascript'>window.top.location='index.php?about&success#form-discount';</script>";
+                echo "<script type='text/javascript'>window.top.location='index.php?about&failed#form-discount';</script>";
             } else if(isset($_GET["service"]) == "service"){
-                echo "<script type='text/javascript'>window.top.location='index.php?service&success#form-discount';</script>";
+                echo "<script type='text/javascript'>window.top.location='index.php?service&failed#form-discount';</script>";
             } else{
-                echo "<script type='text/javascript'>window.top.location='index.php?home&success#form-discount';</script>";
+                echo "<script type='text/javascript'>window.top.location='index.php?home&failed#form-discount';</script>";
             }
         }
 

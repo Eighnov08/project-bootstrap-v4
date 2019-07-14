@@ -11,6 +11,7 @@
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://kit.fontawesome.com/f275b53f62.js"></script>
     <link rel="stylesheet" href="css/custom.css">
+    <link href="images/blogger.png" type="image/x-icon" rel="Shortcut Icon" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <title>Project Bootstrap v4</title>
