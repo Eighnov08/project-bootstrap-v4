@@ -14,5 +14,5 @@
     <link href="images/blogger.png" type="image/x-icon" rel="Shortcut Icon" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-    <title>Project Bootstrap v4</title>
+    <title>Premium Labels</title>
 </head>

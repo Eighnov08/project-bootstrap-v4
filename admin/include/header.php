@@ -37,7 +37,7 @@
                     <a href="#"><i class="fas fa-users fa-fw"></i>&nbsp;&nbsp;Data<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li><a href="index.php?customer">Customer</a></li>
-                        <li><a href="index.php?message">Message</a></li>
+                        <li><a href="index.php?contact">Contact</a></li>
                         <li><a href="index.php?services">Services</a></li>
                     </ul>
                 </li>
